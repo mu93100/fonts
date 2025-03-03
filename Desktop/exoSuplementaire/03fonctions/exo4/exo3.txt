@@ -1,0 +1,8 @@
+1-- Créer une fonction salutation qui prend nom en paramettre et affiche une salutation personnalisée dans le console log
+
+
+2 -- faire un click event sur un bouton qui appelle la fonction salutation.
+
+
+
+

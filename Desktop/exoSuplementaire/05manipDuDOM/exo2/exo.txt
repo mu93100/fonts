@@ -1,0 +1,3 @@
+ A l'aide du DOM-0, faites en sorte que quand ce bouton est cliqué, il affiche Vous m'avez cliqué à la place de Cliquez-moi, comme c'est le cas dans l'exemple ci-contre. ici vous devez utiliser onclick et non addEventListener().
+
+// <button>Cliquez moi</button>

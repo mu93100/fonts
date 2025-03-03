@@ -1,0 +1,11 @@
+1--faire une fonction qui affiche un console log puis appelez cette fonction
+
+2 -- faire une fonction qui return la somme de a + b
+
+let a=2
+let b=2
+
+3 -- Déclarez une fonction, qui se contente d'afficher le texte Hello world! dans une alert().
+
+
+4-- Dans cet exercice vous devez créer une fonction nommée isoNum qui renvoie le nombre 42

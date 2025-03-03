@@ -1,0 +1,9 @@
+//. Attachez une événement sur le <button> de manière à masquer l'<aside> s'il est affiché, et de l'afficher s'il est masqué — ce que l'on appele généralement un toggle.
+
+// <button type="button">Toggle</button>
+
+// {/* 
+
+// <aside>Cachez ce contenu que je ne saurais voir.</aside>
+// 
+//  */}

@@ -1,0 +1,32 @@
+
+
+
+//. Créez 2 variables nombre1 et nombre2 auxquelles vous affecterez respectivement des valeurs numériques. Vous en calculerez la somme dont vous affecterez la variable somme et vous afficherez dans une fonction alert() le message suivant : "La somme de nombre1 et de nombre2 est resultat".
+
+
+
+
+
+
+
+
+
+// faites un console.log des Number() et parseInt() que vois tu ? 
+let a="33abcd"
+let b="55.32"
+let c="ef254"
+
+parseInt(a)
+parseInt(b)
+parseInt(c)
+Number(a)
+Number(b)
+Number(c)
+
+//Dans cet exercice vous devez créer les variables suivantes :
+
+// num qui contient le nombre 23
+// txt qui contient la chaine de caractère 33
+// tmp qui contient le nombre 0
+// Convertir la chaîne contenue dans txt en nombre avec parseInt() et mettre le résultat dans tmp
+// Ajouter à num le contenu de tmp

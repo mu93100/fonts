@@ -1,0 +1,9 @@
+Terminez d'écrire la fonction askNumber() qui va demander à l'utilisateur de rentrer un nombre avec une prompt(). Une fois le nombre rentré, la fonction va convertir la chaîne de caractères entrée un nombre, et elle vérifiera s'il s'agit bien un nombre. Si ce n'est pas un nombre, la fonction redemande à l'utilisateur d'en entrer un. Dès que le nombre est correct, la fonction le retourne avec return.
+
+// Trois choses doivent donc êtres utilisées ici : une boucle qui se répète tant que l'utilisateur ne rentre pas un nombre correct, parseInt() et isNaN(). Vous connaissez la fonction parseInt(), mais pas isNaN(). Regardez le code ci-contre pour comprendre son fonctionnement.
+
+function askNumber() {
+    
+}
+
+alert('Le nombre est : ' + askNumber());

@@ -1,0 +1,14 @@
+// verifier deux adresse mail 
+// ici deux input text de texte donnant la possibilité au user d'entrer son adresse mail et une seconde fois pour comparer.
+// reaisez un script qui compare les deux les deux adresse mail au click d'un bouton et envoie un alert soit negative ( pas le même adresse mail) soit ok (même adresse mail)
+
+let email_1 = document.getElementById('email-1'),
+    email_2 = document.getElementById('email-2');
+
+
+
+// Au sein d"une div  se trouvent  un lien <a href="#">. Ce lien ne mène nulle part puisqu'il vaut #. Il faudrait donc modifier son attribut href pour le faire pointer vers le lien de votre choix
+
+// Écrivez le code qui permet de faire ça. 
+
+//html :  <a href="#">lien vers...</a>

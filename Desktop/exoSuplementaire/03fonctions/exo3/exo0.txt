@@ -1,0 +1,10 @@
+cette variable doit etre à l'exterieur de la function
+let b=12 
+
+ecrivez une fonction qui change la valeur de b, appelez cette fonction dans un console log
+
+
+cette variable doit etre à l'exterieur de la function
+let c=12 
+ecrivez une fonction qui déclare une variable c avec une valeur differente de 12
+appelez cette fonction dans un console log
