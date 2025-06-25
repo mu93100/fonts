@@ -1,4 +1,4 @@
-*{ border: 1px dotted pink;}
+/* *{ border: 1px dotted pink;} */
 header {
     display: flex;
     flex-direction: row;
@@ -37,7 +37,7 @@ header {
 .marquee-container {
     overflow: hidden; /* masque ce qui déborde */
     width: 100%; /* largeur de la fenêtre */
-    padding: 30rem 0;
+    padding: 5rem 0;
     box-sizing: border-box;
 }
 
@@ -75,5 +75,5 @@ header {
 }
 /* ---------------------accroche */
 .containerLogo{
-    font-size: 2rem;
+    font-size: 1.8rem;
 }

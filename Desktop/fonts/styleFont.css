@@ -1,46 +1,20 @@
-
-.fugaz-one-regular {
-  font-family: "Fugaz One", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
 .codystar-regular {
   font-family: "Codystar", sans-serif;
-  font-weight: 400;
+  font-weight: 200;
   font-style: normal;
+  letter-spacing: .2rem;
 }
 .doto{
   font-family: "Doto", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
   font-style: normal;
-  font-variation-settings:
-    "ROND" 0;
+  font-variation-settings:"ROND" 0;
+  letter-spacing: .2rem;
+
 }
 .coral-pixels {
   font-family: "Coral Pixels", serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.comme {
-  font-family: "Comme", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-.baloo{
-  font-family: "Baloo Bhaijaan 2", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 200;
-  font-style: normal;
-}
-.gudea-regular {
-  font-family: "Gudea", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-}
-.pt-sans-regular {
-  font-family: "PT Sans", sans-serif;
   font-weight: 400;
   font-style: normal;
 }
@@ -49,8 +23,33 @@
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: .1rem;
+}
+/* ------------fin text défilant */
+.comme {
+  font-family: "Comme", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+    letter-spacing: .06rem;
+
+}
+.baloo{
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.gudea-regular {
+  font-family: "Gudea", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.pt-sans {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 .monda {
   font-family: "Monda", sans-serif;
@@ -60,7 +59,7 @@
 }
 .inria-sans-regular {
   font-family: "Inria Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 300;
   font-style: normal;
 }
 .mingzat-regular {
