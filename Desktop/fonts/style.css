@@ -1,8 +1,43 @@
+*{ border: 1px dotted pink;}
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: end;
+    padding: 2rem 2rem  0.2rem .3rem;
+    margin: 0;
+    /* border: 1px dotted rgb(28, 230, 95); */
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    /* Centrer horizontalement */
+        color: black;
+}
+
+.nav ul li {
+    margin: 0 20px;
+    color: black;
+}
+
+.nav ul li a {
+    color: black;
+    display: block;
+    /* padding: 15px 10px; */
+    text-decoration: none;
+    font-weight: 600;
+    /* transition: background-color 0.3s, color 0.3s; */
+    border-radius: 4px;
+}
+
 /*-----------------------------text défilant------------------------------------------  */
 .marquee-container {
     overflow: hidden; /* masque ce qui déborde */
     width: 100%; /* largeur de la fenêtre */
-    padding: 20rem 0;
+    padding: 30rem 0;
     box-sizing: border-box;
 }
 
@@ -10,7 +45,7 @@
     display: inline-block;
     white-space: nowrap;
     font-size: 5rem;
-    font-family: "Doto", sans-serif;
+    /* font-family: "Doto", sans-serif; */
     font-size: 1.2 rem;
     font-optical-sizing: auto;
     font-weight: 700;
@@ -24,3 +59,21 @@
         0 0 0.12em blue;
 }
 
+/*-----------------------style a_propos_text */
+.a_propos_text{
+    display: flex;
+    justify-content: center;
+}
+.a_propos_text img{
+    height:100%;
+}
+.text_a_propos_text{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height:40rem;
+}
+/* ---------------------accroche */
+.containerLogo{
+    font-size: 2rem;
+}

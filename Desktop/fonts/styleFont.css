@@ -12,7 +12,7 @@
 .doto{
   font-family: "Doto", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <400>;
+  font-weight: 400;
   font-style: normal;
   font-variation-settings:
     "ROND" 0;
@@ -22,3 +22,50 @@
   font-weight: 400;
   font-style: normal;
 }
+.comme {
+  font-family: "Comme", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.baloo{
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 200;
+  font-style: normal;
+}
+.gudea-regular {
+  font-family: "Gudea", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.pt-sans-regular {
+  font-family: "PT Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.tourney {
+  font-family: "Tourney", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+.monda {
+  font-family: "Monda", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+.inria-sans-regular {
+  font-family: "Inria Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.mingzat-regular {
+  font-family: "Mingzat", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+/* ------------------------FIN FONTS---------------- */
