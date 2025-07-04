@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire d'Adhésion - GAS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            font-weight: 300;
+        }
+
+        .header p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .form-container {
+            padding: 40px;
+        }
+
+        .form-section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: #333;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #4CAF50;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: '';
+            width: 20px;
+            height: 20px;
+            background: #4CAF50;
+            border-radius: 50%;
+            margin-right: 15px;
+        }
+
+        .form-group {
+            margin-bottom: 25px;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 20px;
+        }
+
+        .form-row .form-group {
+            flex: 1;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+
+        .required {
+            color: #e74c3c;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+            box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.1);
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            accent-color: #4CAF50;
+        }
+
+        .checkbox-group label {
+            margin: 0;
+            font-weight: normal;
+            line-height: 1.5;
+            cursor: pointer;
+        }
+
+        .radio-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .radio-option {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .radio-option input[type="radio"] {
+            width: 18px;
+            height: 18px;
+            accent-color: #4CAF50;
+        }
+
+        .radio-option label {
+            margin: 0;
+            font-weight: normal;
+            cursor: pointer;
+        }
+
+        .motivation-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 15px;
+            margin: 30px 0;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #eee;
+        }
+
+        .submit-btn {
+            background: linear-gradient(135deg, #4CAF50 0%, #45a049 100%);
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+        }
+
+        .info-box {
+            background: #e8f5e8;
+            border-left: 4px solid #4CAF50;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .info-box h4 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .info-box p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px;
+                border-radius: 15px;
+            }
+            
+            .header {
+                padding: 30px 20px;
+            }
+            
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .form-container {
+                padding: 30px 20px;
+            }
+            
+            .form-row {
+                flex-direction: column;
+                gap: 0;
+            }
+            
+            .radio-group {
+                flex-direction: column;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🌱 Formulaire d'Adhésion</h1>
+            <p>Groupe d'Achat Solidaire - Consommation Responsable</p>
+        </div>
+
+        <div class="form-container">
+            <form id="adhesionForm">
+                
+                <!-- Informations personnelles -->
+                <div class="form-section">
+                    <h2 class="section-title">Informations Personnelles</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="prenom">Prénom <span class="required">*</span></label>
+                            <input type="text" id="prenom" name="prenom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="nom">Nom <span class="required">*</span></label>
+                            <input type="text" id="nom" name="nom" required>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="telephone">Téléphone <span class="required">*</span></label>
+                            <input type="tel" id="telephone" name="telephone" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adresse">Adresse complète <span class="required">*</span></label>
+                        <input type="text" id="adresse" name="adresse" required>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ville">Ville <span class="required">*</span></label>
+                            <input type="text" id="ville" name="ville" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="codePostal">Code postal <span class="required">*</span></label>
+                            <input type="text" id="codePostal" name="codePostal" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="dateNaissance">Date de naissance</label>
+                        <input type="date" id="dateNaissance" name="dateNaissance">
+                    </div>
+                </div>
+
+                <!-- Informations famille -->
+                <div class="form-section">
+                    <h2 class="section-title">Composition du Foyer</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="nbPersonnes">Nombre de personnes dans le foyer <span class="required">*</span></label>
+                            <select id="nbPersonnes" name="nbPersonnes" required>
+                                <option value="">Choisir...</option>
+                                <option value="1">1 personne</option>
+                                <option value="2">2 personnes</option>
+                                <option value="3">3 personnes</option>
+                                <option value="4">4 personnes</option>
+                                <option value="5">5 personnes</option>
+                                <option value="6+">6 personnes ou plus</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="nbEnfants">Nombre d'enfants</label>
+                            <input type="number" id="nbEnfants" name="nbEnfants" min="0" max="10" value="0">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Motivations -->
+                <div class="form-section">
+                    <h2 class="section-title">Motivations & Attentes</h2>
+                    
+                    <div class="motivation-section">
+                        <div class="form-group">
+                            <label>Quelles sont vos principales motivations pour rejoindre un GAS ? <span class="required">*</span></label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="motiv1" name="motivations[]" value="economique">
+                                <label for="motiv1">Faire des économies sur les courses</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="motiv2" name="motivations[]" value="qualite">
+                                <label for="motiv2">Accéder à des produits de qualité</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="motiv3" name="motivations[]" value="local">
+                                <label for="motiv3">Soutenir l'agriculture locale</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="motiv4" name="motivations[]" value="environnement">
+                                <label for="motiv4">Réduire l'impact environnemental</label>
+                            </div>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="motiv5" name="motivations[]" value="social">
+                                <label for="motiv5">Créer du lien social</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="attentes">Décrivez vos attentes spécifiques (types de produits, fréquence, etc.)</label>
+                        <textarea id="attentes" name="attentes" placeholder="Exprimez vos attentes, besoins particuliers, suggestions..."></textarea>
+                    </div>
+                </div>
+
+                <!-- Disponibilités -->
+                <div class="form-section">
+                    <h2 class="section-title">Participation & Disponibilités</h2>
+                    
+                    <div class="form-group">
+                        <label>Êtes-vous disponible pour participer à la vie du GAS ? <span class="required">*</span></label>
+                        <div class="radio-group">
+                            <div class="radio-option">
+                                <input type="radio" id="dispo1" name="disponibilite" value="tres_disponible" required>
+                                <label for="dispo1">Très disponible (organisation, livraisons)</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="dispo2" name="disponibilite" value="disponible" required>
+                                <label for="dispo2">Disponible occasionnellement</label>
+                            </div>
+                            <div class="radio-option">
+                                <input type="radio" id="dispo3" name="disponibilite" value="peu_disponible" required>
+                                <label for="dispo3">Peu disponible (contraintes horaires)</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="competences">Avez-vous des compétences particulières à partager ?</label>
+                        <textarea id="competences" name="competences" placeholder="Comptabilité, informatique, transport, relations producteurs, etc."></textarea>
+                    </div>
+                </div>
+
+                <!-- Informations GAS -->
+                <div class="info-box">
+                    <h4>📋 Informations importantes</h4>
+                    <p><strong>Cotisation annuelle :</strong> 20€ par foyer</p>
+                    <p><strong>Engagement :</strong> Participation minimale de 50€ de commandes par trimestre</p>
+                    <p><strong>Fonctionnement :</strong> Commandes groupées mensuelles, livraisons le samedi matin</p>
+                    <p><strong>Lieu de livraison :</strong> Salle communale, 123 rue de la Paix</p>
+                </div>
+
+                <!-- Consentements -->
+                <div class="form-section">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="engagement" name="engagement" required>
+                        <label for="engagement">
+                            <strong>Je m'engage à respecter les règles de fonctionnement du GAS</strong> 
+                            et à participer activement à la vie du groupe <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="cotisation" name="cotisation" required>
+                        <label for="cotisation">
+                            <strong>J'accepte de régler la cotisation annuelle de 20€</strong> 
+                            dans les 15 jours suivant l'acceptation de ma candidature <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="rgpd" name="rgpd" required>
+                        <label for="rgpd">
+                            <strong>J'accepte que mes données personnelles soient traitées</strong> 
+                            dans le cadre de la gestion des adhésions du GAS <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="newsletter" name="newsletter">
+                        <label for="newsletter">
+                            J'accepte de recevoir des informations par email sur les activités du GAS
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Bouton de soumission -->
+                <div class="submit-container">
+                    <button type="submit" class="submit-btn">
+                        🌱 Envoyer ma candidature
+                    </button>
+                    <p style="margin-top: 15px; color: #666; font-size: 0.9rem;">
+                        Votre candidature sera étudiée par le bureau du GAS sous 7 jours
+                    </p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('adhesionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Vérification des motivations (au moins une cochée)
+            const motivations = document.querySelectorAll('input[name="motivations[]"]:checked');
+            if (motivations.length === 0) {
+                alert('Veuillez sélectionner au moins une motivation.');
+                return;
+            }
+            
+            // Simulation de l'envoi
+            const submitBtn = document.querySelector('.submit-btn');
+            const originalText = submitBtn.textContent;
+            
+            submitBtn.textContent = '⏳ Envoi en cours...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                alert('✅ Votre candidature a été envoyée avec succès !\n\nVous recevrez une confirmation par email dans les prochaines minutes.');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+                
+                // Réinitialiser le formulaire
+                this.reset();
+            }, 2000);
+        });
+        
+        // Amélioration UX : compteur de caractères pour les textarea
+        document.querySelectorAll('textarea').forEach(textarea => {
+            textarea.addEventListener('input', function() {
+                const maxLength = 500;
+                const currentLength = this.value.length;
+                
+                if (currentLength > maxLength) {
+                    this.value = this.value.substring(0, maxLength);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
