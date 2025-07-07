@@ -1,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 1px dotted blue;
+}
+body{
+    background-image: url(/Bitmap\(1\).svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    ba
+}
+/* 
+colors
+F blue-900
+rgb(11, 13, 23)
+C blue-300
+rgb(208, 214, 249)
+
+
+.bellefair-regular {
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.barlow-condensed-regular {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.barlow-regular {
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-style: normal;
+  } */

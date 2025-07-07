@@ -1,0 +1,222 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* border: 1px dotted white; */
+}
+body{
+    background-image: url(/medias/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header{
+    display: flex;
+    align-items: center;
+    margin: 3rem 0 0 4rem;
+    /* width: 100%; */
+    position: relative;
+}
+nav{
+    background-color: rgba(59, 64, 86, 0.745);
+    width: 54%;
+    background-position-x: right 0;
+    position: absolute; right: 0px;
+    /* z-index: 2; */
+
+}
+.logo{
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    
+    
+}
+hr{
+    width: 40%;
+    border: 1px solid rgba(59, 64, 86, 0.774);
+    z-index: 1;
+    margin-left: 4rem;
+}
+main{
+    display: flex;
+    margin: 20rem 6rem 7rem 10rem;
+    flex-basis: 50%;
+    gap: 10rem;
+}
+main section{
+    flex-basis: 50%;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    /* justify-content: end; */
+    color: rgb(208, 214, 249);
+    font-family: "Barlow Condensed", serif;
+    font-weight: 300;
+    letter-spacing: 2px;
+    list-style-type: none;
+    padding: 0 2rem 0 6rem;
+    /* (est ce qu'on ne peut pas faire sa opropre liste à puces ,,,) */
+}
+li{
+    padding: 2rem 0;
+    /* margin: 0 1.5rem;
+    border-bottom: 0.2rem solid rgb(208, 214, 249); */
+}
+li:hover{
+    border-bottom: 3px solid rgb(208, 214, 249);
+    padding: 2rem 0 1.8rem 0;
+}
+h3{
+    color: rgb(208, 214, 249);
+    font-family: "Barlow Condensed", serif;
+    font-weight: 300;
+    font-size: 1.7em;
+    letter-spacing: 4px;
+}
+h1{
+    color: white;
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-size: 8em;
+}
+p{
+    color: rgb(208, 214, 249);
+    font-family: "Barlow Condensed", serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+}
+.container1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 2rem;          /* gap avec display flex TOUJOURS */
+}
+.container2{
+    margin: 0 auto;
+    /* padding-left: 20rem;  */
+    position: relative;
+}
+.container2 button{
+    position:absolute; 
+    position-area: center;
+}
+/* .container2 button:active{
+    box-shadow: 2px 2px 5px #fc894d;
+    background-color: rgba(255, 255, 255, 0.123);
+}                              l'éclipse--------*/
+
+
+
+.container2 button:active{
+    box-shadow: 0px 0px 0px 3.5rem  rgba(255, 255, 255, 0.123);
+}
+@media screen and (width <= 768px){
+    hr{
+        visibility: hidden;
+    }
+    body{
+        background-image: url(/medias/bg_tablet.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    header{
+        display: flex;
+        align-items: center;
+        margin: 0 0 0 4rem;
+        width: 100%;
+        position: relative;
+    }
+    main{
+        flex-direction: column;
+        text-align: center;
+        margin: 6rem 9rem auto 9rem;
+        gap: 4rem;
+
+    }
+    
+.container1{
+    display: flex;
+    flex-direction: column;
+    margin-top: 3rem;
+    gap: 2rem;          /* gap avec display flex TOUJOURS */
+}
+.container2{
+    margin: 0 auto;
+    /* padding-left: 20rem;  */
+    position: relative;
+}
+.container2 button{
+    color: rgb(11, 13, 23);
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-size: 2em;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 50%;
+    border: none;
+    position:absolute; 
+    position-area: center;
+}
+    
+}
+@media screen and (max-width: 375px){
+    main{
+        flex-direction: column;
+    }
+    
+}
+
+/* 
+colors
+F blue-900
+rgb(11, 13, 23)
+C blue-300
+rgb(208, 214, 249)
+
+
+.bellefair-regular {
+    font-family: "Bellefair", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.barlow-condensed-regular {
+    font-family: "Barlow Condensed", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.barlow-regular {
+    font-family: "Barlow", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+    
+  .roboto-<uniquifier> {
+  font-family: "Roboto", serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;   
+    
+    
+    02
+TYPOGRAPHY
+Text Preset 1 - Bellefair Regular144px - 171.9% Line Height (Normal) - 0px Letter Spacing
+Text Preset 6 - Bellefair Regular28px - 32.1% Line Height (Normal) - 0px Letter Spacing
+EARTH
+384,400 km
+Text Preset 7 - Barlow Condensed Regular14px - 16.8% Line Height (Normal) - 2px Letter Spacing
+Text Preset 2  - Bellefair Regular100px - 114.6% Line Height (Normal) - 0px Letter Spacing
+AVG. DISTANCE
+VENUS
+Text Preset 8 - Barlow Condensed Regular16px - 19.2% Line Height (Normal) - 2px Letter Spacing
+EUROPA
+Text Preset 3 - Bellefair Regular56px - 64.2% Line Height (Normal) - 0px Letter Spacing
+Text Preset 9 - Barlow Regular18px - 180% Line Height - 0px Letter Spacing
+JUPITER & SATURN
+Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra, tortor libero sodales leo, eget blandit nunc tortor eu nibh. Nullam mollis. Ut justo. Suspendisse potenti.Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. 
+Text Preset 4 - Bellefair Regular32px - 36.7% Line Height (Normal) - 0px Letter Spacing
+URANUS, NEPTUNE, & PLUTO
+Text Preset 5 - Barlow Condensed Regular28px - 33.6% Line Height (Normal) - 4px Letter Spacing
+HAUMEA, SEDNA, ERIS, & CERES*/
